@@ -4,36 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/main.css">
-    <title>JJenk89 - Portfolio</title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <!-- For iOS -->
+    <link rel="apple-touch-icon" href="../assets/favicon-lrg.png">
+    <!-- For Chrome on Android -->
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+
+    <title>Portfolio</title>
 </head>
 <body>
     <!-- HOME PAGE -->
+<article class="scroller">
     <section class="home" id="home"><a href="#home"></a>
-        <div class="home-content">
-            <nav>
-                <div class="logo">JJenk89</div>
-                <div class="burger"><button class="burger-btn"> - - - </button></div>
-            </nav>
-            <h2 class="intro">
-                Hi, I'm <span class="Jason">Jason</span>!
-            </h2>
-            <h2>Frontend Web Developer</h2>
-            <div class="home-bottom">
-                <p class="extra-info">(...And music nerd, 
-                    cook, traveller and 
-                    language enthusiast)</p>
-                <p class="call-to-action">Check out some of my work below</p>
+        <div class="background">
+            <div class="home-content">
+                <nav>
+                    <div class="logo">JJenk89</div>
+                    <div class="burger"><button class="burger-btn"> - - - </button></div>
+                </nav>
+                <h2 class="intro">
+                    Hi, I'm <span>Jason</span>!
+                </h2>
+                <h2>Frontend Web Developer</h2>
+                <div class="home-bottom">
+                    <p class="extra-info">(...And music nerd, 
+                        cook, traveller and 
+                        language enthusiast)</p>
+                    <p class="call-to-action">Check out some of my work below</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- PROJECT PAGE -->
+     <section class="projects" id="projects"><a href="#projects"></a>
+        <div class="section-title">
+            Projects
+            
+        </div>
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <img src="../assets/screenshots/beercans_large.png" alt="placeholder"></div>
+            <div class="carousel-nav">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="buttons">
+                <button>Github Repo</button>
+                <button>Live Site</button>
+            </div>
+        </div>
+        <div class="project">
+            <h4 class="project-title">Beercans & Co</h4>
+            <p class="project-type">Business Site (Brochure)</p>
+            <p class="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, ipsam? Autem cumque mollitia deserunt nulla vero placeat, dolorum recusandae fuga?
+            </p>
+        </div>
+
+
+     </section>
 
     <!-- ABOUT ME PAGE -->
+     <section class="about-me">
+        <div class="section-title">About Me</div>
+        <div class="about-me-text">
+            
+            <p class="p1">I'm a web developer originally from the UK based in Vienna, Austria.</p>
+
+            <p class="p2">I've designed and coded fully functional and tested web apps both for clients and as pet projects.</p><br>
+
+            <p class="p3">I've used and am familiar with the following <span>technologies</span>...</p>
+        </div>
+        <div class="tech-icons-grid">
+                <img src="/assets/icons8-html.svg" alt="html logo" loading="lazy">
+                <img src="/assets/icons8-css.svg" alt="css logo" loading="lazy">
+                <img src="/assets/icons8-js-100.svg" alt="JavaScript logo" loading="lazy">
+                <img src="/assets/icons8-react.svg" alt="React logo" loading="lazy">
+                <img src="/assets/icons8-laravel-100.png" alt="laravel-logo" loading="lazy">
+                <img src="/assets/icons8-typescript.svg" alt="Typescript logo" loading="lazy">
+                <img src="/assets/icons8-git.svg" alt="git logo" loading="lazy">
+                <img src="/assets/icons8-mysql.svg" alt="mysql logo" loading="lazy">
+                <img src="/assets/icons8-sass-avatar.svg" alt="sass logo" loading="lazy">
+                <img src="/assets/icons8-tailwind-css.svg" alt="tailwind logo" loading="lazy">
+                <img src="/assets/icons8-bootstrap.svg" alt="bootstrap logo" loading="lazy">
+                <img src="/assets/icons8-figma.svg" alt="figma logo" loading="lazy">
+        </div>
+     </section>
 
     <!-- CONTACT -->
+     <section class="contact">
+        <div>
+            Get in touch
+        </div>
+        <p class="contact-text">
+            <span>Like</span> what you've seen?<br> 
+            Fancy your <span>own website</span>?<br>
+            Want to give me a job?! <br><br>
 
+            Then fill in the form below and 
+            <span>let me know</span>!
+        </p>
+
+        <form action="" method="">
+            <label for=""></label>
+            <input type="text" placeholder="Your name">
+            <label for=""></label>
+            <input type="text" placeholder="Your email">
+            <label for=""></label>
+            <textarea placeholder="Your message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+     </section>
     <!-- FOOTER -->
+     <section class="footer">
+        <footer>
+            <p>&#169;Jason Jenkinson (JJenk89), 2024. All right reserved.</p>
+            <p>All icons (except favicon) by <a href="https://icons8.com/" target="_blank">icon8</a></p>
+        </footer>
+    </section>
+</article>
+
+ 
     
 </body>
 </html>
