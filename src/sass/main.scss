@@ -39,6 +39,8 @@ body {
     color: $font-dark;
 }
 
+
+
 .scroller {
     height: 100dvh;
     overflow-y: scroll;
@@ -48,6 +50,10 @@ body {
   .scroller section {
     scroll-snap-align: start;
   }
+
+.disable-scroll {
+    overflow: hidden;
+}
 
 span {
     color: $gold;
@@ -96,13 +102,54 @@ nav {
     .burger-btn {
         border: none;
         background: none;
-        color: white;
+        height: 100%;
+        width: 100%;
     }
 }
 
+/* MOBILE MENU */
 
+.burger-menu-bkg {
+    background-image: url(/assets/home-bkg-sm.jpg);
+}
+.burger-menu-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
+    .cross {
+        background: none;
+        border: none;
+    }
+}
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background-color: rgba(47, 47, 47, 0.945);
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem 1rem 1rem;
 
+    ul {
+        list-style: none;
+        height: 100%;
+        font-family: $cursive;
+        font-size: 2.25rem;
+        margin: 3rem;
+        text-align: center;
+
+        li {
+
+            margin: 2.25rem;
+            a {
+                color: white;
+
+            }
+
+        }
+    }
+}
 
 .home-bottom {
     display: flex;
@@ -313,4 +360,6 @@ footer {
 }
 
 
-
+.hidden {
+    display: none;
+}
