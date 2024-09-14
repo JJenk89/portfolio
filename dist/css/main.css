@@ -142,18 +142,35 @@ nav .burger-btn {
 .carousel-wrapper {
   margin-top: 1rem;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
+  position: relative;
 }
-.carousel-wrapper .carousel img {
+.carousel-wrapper .carousel__track-container {
+  background-color: lime;
+  position: relative;
+  height: 100%;
+}
+.carousel-wrapper .carousel__track-container .carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.carousel-wrapper .carousel__track-container .carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 100%;
+}
+.carousel-wrapper .carousel__track-container img {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
 }
 .carousel-wrapper .carousel-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin: 1rem 0 1rem 0;
 }
@@ -168,6 +185,7 @@ nav .burger-btn {
 .carousel-wrapper .buttons {
   margin: 1rem 0 1rem 0;
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
 }
 .carousel-wrapper button {
@@ -183,6 +201,7 @@ nav .burger-btn {
 
 .project {
   margin: 0 1rem 0 1rem;
+  position: absolute;
 }
 .project h4 {
   font-family: "Poppins", sans-serif;
