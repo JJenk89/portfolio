@@ -130,6 +130,8 @@ nav .burger-btn {
 /* PROJECTS */
 .projects {
   height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
 }
 .projects .section-title {
   font-family: "Annie Use Your Telescope", cursive;
@@ -139,13 +141,30 @@ nav .burger-btn {
   margin: 0 0 0 1rem;
 }
 
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 1rem 0;
+  position: relative;
+  top: 46%;
+}
+.carousel-nav .dot {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+.carousel-nav .active {
+  background-color: #F8A910;
+}
+
 .carousel-wrapper {
   margin-top: 1rem;
   width: 100%;
   position: relative;
 }
 .carousel-wrapper .carousel__track-container {
-  background-color: lime;
   position: relative;
   height: 100%;
 }
@@ -153,6 +172,7 @@ nav .burger-btn {
   padding: 0;
   margin: 0;
   list-style: none;
+  transition: transform 250ms ease-in;
 }
 .carousel-wrapper .carousel__track-container .carousel__slide {
   position: absolute;
@@ -166,21 +186,6 @@ nav .burger-btn {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
-}
-.carousel-wrapper .carousel-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0 1rem 0;
-}
-.carousel-wrapper .carousel-nav .dot {
-  width: 20px;
-  height: 2px;
-  background-color: white;
-}
-.carousel-wrapper .carousel-nav .active {
-  background-color: #F8A910;
 }
 .carousel-wrapper .buttons {
   margin: 1rem 0 1rem 0;
