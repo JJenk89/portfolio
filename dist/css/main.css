@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
 body {
   background-color: black;
   font-family: "Poppins", sans-serif;

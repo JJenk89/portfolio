@@ -41,6 +41,7 @@
     </nav>
 </div>
 <article class="scroller">
+    <!-- HOME SECTION -->
     <section class="home" id="home"><a href="#home"></a>
         <div class="background">
             <div class="home-content">
@@ -80,6 +81,7 @@
         <div class="section-title">
             Projects
             
+        <!-- CAROUSEL -->
         </div>
         <div class="carousel-wrapper">
             <div class="carousel__track-container">
@@ -96,7 +98,7 @@
                             <h4 class="project-title">Todo App</h4>
                             <p class="project-type">Personal Project (SPA)</p>
                             <p class="project-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, ipsam? Autem cumque mollitia deserunt nulla vero placeat, dolorum recusandae fuga?
+                                This was a React app I created in order to learn the how the library works and get familiar with using it. Classic CRUD with native drag and drop functionality, theme toggler and local storage.
                             </p>
                         </div>
                     </li>
@@ -113,7 +115,7 @@
                             <h4 class="project-title">Beercans & Co</h4>
                             <p class="project-type">Business Site (Brochure)</p>
                             <p class="project-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, ipsam? Autem cumque mollitia deserunt nulla vero placeat, dolorum recusandae fuga?
+                                This was the first website I built in order to learn the basic of web development. A simple static site for a business including an image carousel and contact form.
                             </p>
                         </div>
                     </li>
@@ -173,16 +175,26 @@
             <span>let me know</span>!
         </p>
 
-        <form action="" method="">
-            <label for=""></label>
-            <input type="text" placeholder="Your name">
-            <label for=""></label>
-            <input type="text" placeholder="Your email">
-            <label for=""></label>
-            <textarea placeholder="Your message"></textarea>
+        <!-- CONTACT FORM 
+         
+        TODO: complete fields and write PHP script.
+        Form must connect to a server and send an email
+
+        -->
+        <form action="contact.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            
             <button type="submit">Send</button>
         </form>
      </section>
+
     <!-- FOOTER -->
      <section class="footer">
         <footer>

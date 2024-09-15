@@ -32,6 +32,15 @@ $font-weights: (
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
 
 
 body {
@@ -64,12 +73,13 @@ span {
 .home {
     background-image: url(/assets/home-bkg-sm.jpg);
 
-    .background {
+     .background {
         background-color: rgba(47, 47, 47, 0.54)
 
     }
 
 }
+
 
 .home-content {
     margin: 0 1rem 0 1rem;
