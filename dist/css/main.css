@@ -56,7 +56,7 @@ span {
   font-size: 40px;
   font-weight: 900;
   line-height: 1;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 .home-content .intro {
   margin-bottom: 2rem;
@@ -125,15 +125,18 @@ nav .burger-btn {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  height: 100dvh;
 }
 .home-bottom .extra-info {
   width: 200px;
   font-size: 14px;
   text-align: right;
-  margin: 6rem 0 3rem 0;
+  margin: 4rem 0 2rem 0;
 }
 .home-bottom .call-to-action {
   font-weight: 800;
+  height: 10%;
+  align-content: end;
 }
 
 /* PROJECTS */
@@ -157,7 +160,7 @@ nav .burger-btn {
   gap: 1rem;
   margin: 1rem 0 1rem 0;
   position: relative;
-  top: 46%;
+  top: 48%;
 }
 .carousel-nav .dot {
   width: 20px;
@@ -197,7 +200,7 @@ nav .burger-btn {
   border-radius: 5px;
 }
 .carousel-wrapper .buttons {
-  margin: 1rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -214,6 +217,7 @@ nav .burger-btn {
 }
 
 .project {
+  height: 33vh;
   margin: 0 1rem 0 1rem;
   position: absolute;
 }
@@ -226,6 +230,64 @@ nav .burger-btn {
   font-size: 0.75rem;
 }
 
+@media screen and (min-width: 376px) {
+  .burger-menu-bkg {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+  .home {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+}
+@media screen and (min-width: 426px), screen and (min-height: 666px) {
+  .burger-menu-bkg {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+  .home {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+  .home .background {
+    background-color: rgba(47, 47, 47, 0.54);
+  }
+  .home-content {
+    margin: 0 1rem 0 1rem;
+    height: 100dvh;
+  }
+  .home-content h2 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+  .home-content .intro {
+    margin-bottom: 4rem;
+  }
+  .home-bottom .extra-info {
+    margin: 4rem 0 4rem 0;
+  }
+  .project {
+    height: 33vh;
+    margin: 0 1rem 0 1rem;
+    position: absolute;
+    align-content: center;
+  }
+  .project h4 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .project .project-type {
+    margin: 1rem 0 1rem 0;
+  }
+  .project .project-description {
+    font-size: 0.75rem;
+  }
+  .carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+    position: relative;
+    top: 43%;
+  }
+}
 /* ABOUT */
 .about-me {
   height: 100dvh;
