@@ -121,6 +121,11 @@ nav {
 }
 
 
+.menu-bar {
+    display: none;
+}
+
+
 
 /* MOBILE MENU */
 
@@ -293,7 +298,137 @@ nav {
     }
 }
 
+
+
+
+
+
+/* ABOUT */
+
+
+
+.about-me {
+    height: 100dvh;
+    margin: $margin;
+
+    .section-title {
+        @include heading();
+    }
+
+    .about-me-text {
+        margin-top: 1rem;
+
+        .p1 {
+            margin: 1rem;
+        }
+        .p2 {
+            margin: 1rem;
+        }
+        .p3 {
+            margin: 1rem;
+        }
+    }
+}
+
+.tech-icons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 1rem;
+
+    img {
+        height: 3.75rem;
+        width: 3.125rem;
+    }
+}
+
+/* CONTACT FORM */
+
+
+
+.contact {
+    height: 100dvh;
+    margin: $margin;
+
+    div {
+        @include heading();
+    }
+   
+}
+
+.contact-text {
+    font-family: $poppins;
+    text-align: center;
+    margin: 1rem auto;
+    line-height: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 3rem 1rem 0 1rem;
+
+    input {
+        background: none;
+        border: $font-dark solid 1px;
+        border-radius: 5px;
+        font-family: $cursive;
+        height: 1.8rem;
+        padding: 0.8rem;
+        letter-spacing: 2px;
+        color: $font-dark;
+
+    }
+
+    textarea {
+        background: none;
+        border: $font-dark solid 1px;
+        border-radius: 5px;
+        font-family: $cursive;
+        padding: 0.8rem;
+        letter-spacing: 2px;
+        color: $font-dark;
+        height: 6.25rem;
+        margin-bottom: 5px;
+        resize: none;
+    }
+
+    button {
+        background: none;
+        border: $font-dark solid 1px;
+        border-radius: 5px;
+        font-family: $cursive;
+        font-weight: map-get($font-weights, thin);
+        font-size: 20px;
+        letter-spacing: 3px;
+        color: $font-dark;
+        height: 1.8rem;
+        width: 6.75rem;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    height: 150px;
+    border-top: 1px white solid;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+.hidden {
+    display: none;
+}
+
 @media screen and (min-width: 376px) {
+
 
     .burger-menu-bkg {
         background-image: url(/assets/home-bkg-m-lrg.jpg);
@@ -366,9 +501,7 @@ nav {
             margin: 1rem 0 1rem 0;
         }
 
-        .project-type {
-            margin: 1rem 0 1rem 0;
-        }
+        
     
         .project-description {
             font-size: 0.75rem;
@@ -387,126 +520,165 @@ nav {
     
 }
 
-/* ABOUT */
+/////////////////////////////////////////////////
+/// LANDSCAPE MEDIA QUERIES - SMALL MOBILES /////
+/// /////////////////////////////////////////////
+/// 
 
+@media screen and (min-width: 590px) {
+   
+    .burger-menu {
+        height: 100dvh;
 
-
-.about-me {
-    height: 100dvh;
-    margin: $margin;
-
-    .section-title {
-        @include heading();
-    }
-
-    .about-me-text {
-        margin-top: 1rem;
-
-        .p1 {
-            margin: 1rem;
+        ul {
+            font-size: 1.4rem;
+            margin: 0;
         }
-        .p2 {
-            margin: 1rem;
-        }
-        .p3 {
-            margin: 1rem;
-        }
-    }
-}
-
-.tech-icons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    margin: 1rem;
-
-    img {
-        height: 3.75rem;
-        width: 3.125rem;
-    }
-}
-
-/* CONTACT FORM */
-
-
-
-.contact {
-    height: 100dvh;
-    margin: $margin;
-
-    div {
-        @include heading();
     }
    
-}
+    .home-content {
+        height: 100dvh;
 
-.contact-text {
-    font-family: $poppins;
-    text-align: center;
-    margin: 1rem;
-    line-height: 32px;
-}
+       
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 3rem 1rem 0 1rem;
+        nav {
+            margin-bottom: 1rem;
 
-    input {
-        background: none;
-        border: $font-dark solid 1px;
-        border-radius: 5px;
-        font-family: $cursive;
-        height: 1.8rem;
-        padding: 0.8rem;
-        letter-spacing: 2px;
-        color: $font-dark;
+          
+        }
 
+        
+
+        
     }
 
-    textarea {
-        background: none;
-        border: $font-dark solid 1px;
-        border-radius: 5px;
-        font-family: $cursive;
-        padding: 0.8rem;
-        letter-spacing: 2px;
-        color: $font-dark;
-        height: 6.25rem;
-        margin-bottom: 5px;
-        resize: none;
+    .home__text-wrapper {
+        height: 100%;
+
+        .intro {
+            margin-bottom: .8rem;
+        }
+
+       
+
+        .extra-info {
+            margin: 0 0 0.8rem 0;
+        }
     }
 
-    button {
-        background: none;
-        border: $font-dark solid 1px;
-        border-radius: 5px;
-        font-family: $cursive;
-        font-weight: map-get($font-weights, thin);
-        font-size: 20px;
-        letter-spacing: 3px;
-        color: $font-dark;
-        height: 1.8rem;
-        width: 6.75rem;
+     .projects {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .project{
+        margin-left: 1rem;
+
+        h4, p {
+            margin-left: 1rem;
+        }
+       
+    }
+
+    .project-type {
+        margin-left: 1rem;
+    }
+    .carousel-nav {
+        top: 78%;
+    }
+
+    .about-me {
+        height: 100dvh;
+    }
+
+    .tech-icons-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .contact {
+        height: 150dvh;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 3rem auto 0 auto;
+        width: 400px;
     }
 }
 
-/* FOOTER */
+////////////////////////
+/// TABLET STYLES /////
+/// //////////////////
+/// 
 
-footer {
-    height: 300px;
-    border-top: 1px white solid;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+@media screen and (min-width: 760px) {
 
-}
+    
+    .home {
+        background-image: url(/assets/home-tablets.jpg);
+    
+         .background {
+            background-color: rgba(47, 47, 47, 0.54)
+    
+        }
+    
+    }
+    
+    .home-content nav {
+        display: flex;
+
+        margin-bottom: 8rem;
+
+        .logo {
+            font-size: 3rem;
+        }
+    }
+    
+    .burger-btn {
+        display: none;
+    }
+
+    .menu-bar {
+
+        display: inline;
+
+        ul {
+            display: flex;
+            font-family: $cursive;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        a {
+            color: $font-dark;
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    .home-content h2 {
+        font-size: 3.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .home__text-wrapper .intro {
+        margin-bottom: 3rem;
+    }
 
 
-.hidden {
-    display: none;
+
+    .home-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 40%;
+        justify-content: flex-end;
+    }
 }

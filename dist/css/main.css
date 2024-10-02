@@ -82,6 +82,10 @@ nav .burger-btn {
   width: 100%;
 }
 
+.menu-bar {
+  display: none;
+}
+
 /* MOBILE MENU */
 .burger-menu-bkg {
   background-image: url(/assets/home-bkg-sm.jpg);
@@ -230,64 +234,6 @@ nav .burger-btn {
   font-size: 0.75rem;
 }
 
-@media screen and (min-width: 376px) {
-  .burger-menu-bkg {
-    background-image: url(/assets/home-bkg-m-lrg.jpg);
-  }
-  .home {
-    background-image: url(/assets/home-bkg-m-lrg.jpg);
-  }
-}
-@media screen and (min-width: 426px), screen and (min-height: 666px) {
-  .burger-menu-bkg {
-    background-image: url(/assets/home-bkg-m-lrg.jpg);
-  }
-  .home {
-    background-image: url(/assets/home-bkg-m-lrg.jpg);
-  }
-  .home .background {
-    background-color: rgba(47, 47, 47, 0.54);
-  }
-  .home-content {
-    margin: 0 1rem 0 1rem;
-    height: 100dvh;
-  }
-  .home-content h2 {
-    font-size: 40px;
-    font-weight: 900;
-  }
-  .home-content .intro {
-    margin-bottom: 4rem;
-  }
-  .home-bottom .extra-info {
-    margin: 4rem 0 4rem 0;
-  }
-  .project {
-    height: 33vh;
-    margin: 0 1rem 0 1rem;
-    position: absolute;
-    align-content: center;
-  }
-  .project h4 {
-    font-size: 2rem;
-    margin: 1rem 0 1rem 0;
-  }
-  .project .project-type {
-    margin: 1rem 0 1rem 0;
-  }
-  .project .project-description {
-    font-size: 0.75rem;
-  }
-  .carousel-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0 1rem 0;
-    position: relative;
-    top: 43%;
-  }
-}
 /* ABOUT */
 .about-me {
   height: 100dvh;
@@ -339,7 +285,7 @@ nav .burger-btn {
 .contact-text {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin: 1rem;
+  margin: 1rem auto;
   line-height: 32px;
 }
 
@@ -386,7 +332,7 @@ form button {
 
 /* FOOTER */
 footer {
-  height: 300px;
+  height: 150px;
   border-top: 1px white solid;
   font-size: 10px;
   display: flex;
@@ -397,4 +343,165 @@ footer {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 376px) {
+  .burger-menu-bkg {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+  .home {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+}
+@media screen and (min-width: 426px), screen and (min-height: 666px) {
+  .burger-menu-bkg {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+  .home {
+    background-image: url(/assets/home-bkg-m-lrg.jpg);
+  }
+  .home .background {
+    background-color: rgba(47, 47, 47, 0.54);
+  }
+  .home-content {
+    margin: 0 1rem 0 1rem;
+    height: 100dvh;
+  }
+  .home-content h2 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+  .home-content .intro {
+    margin-bottom: 4rem;
+  }
+  .home-bottom .extra-info {
+    margin: 4rem 0 4rem 0;
+  }
+  .project {
+    height: 33vh;
+    margin: 0 1rem 0 1rem;
+    position: absolute;
+    align-content: center;
+  }
+  .project h4 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .project .project-description {
+    font-size: 0.75rem;
+  }
+  .carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+    position: relative;
+    top: 43%;
+  }
+}
+@media screen and (min-width: 590px) {
+  .burger-menu {
+    height: 100dvh;
+  }
+  .burger-menu ul {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  .home-content {
+    height: 100dvh;
+  }
+  .home-content nav {
+    margin-bottom: 1rem;
+  }
+  .home__text-wrapper {
+    height: 100%;
+  }
+  .home__text-wrapper .intro {
+    margin-bottom: 0.8rem;
+  }
+  .home__text-wrapper .extra-info {
+    margin: 0 0 0.8rem 0;
+  }
+  .projects {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .project {
+    margin-left: 1rem;
+  }
+  .project h4, .project p {
+    margin-left: 1rem;
+  }
+  .project-type {
+    margin-left: 1rem;
+  }
+  .carousel-nav {
+    top: 78%;
+  }
+  .about-me {
+    height: 100dvh;
+  }
+  .tech-icons-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .contact {
+    height: 150dvh;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 3rem auto 0 auto;
+    width: 400px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .home {
+    background-image: url(/assets/home-tablets.jpg);
+  }
+  .home .background {
+    background-color: rgba(47, 47, 47, 0.54);
+  }
+  .home-content nav {
+    display: flex;
+    margin-bottom: 8rem;
+  }
+  .home-content nav .logo {
+    font-size: 3rem;
+  }
+  .burger-btn {
+    display: none;
+  }
+  .menu-bar {
+    display: inline;
+  }
+  .menu-bar ul {
+    display: flex;
+    font-family: "Annie Use Your Telescope", cursive;
+  }
+  .menu-bar li {
+    list-style: none;
+  }
+  .menu-bar a {
+    color: white;
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+  .home-content h2 {
+    font-size: 3.7rem;
+    margin-bottom: 1rem;
+  }
+  .home__text-wrapper .intro {
+    margin-bottom: 3rem;
+  }
+  .home-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 40%;
+    justify-content: flex-end;
+  }
 }/*# sourceMappingURL=main.css.map */
