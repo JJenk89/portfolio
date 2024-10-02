@@ -1,0 +1,22 @@
+/* GLOBAL VARIABLES */
+$margin: 0 1rem 0 1rem;
+$gold: #F8A910;
+$bg-black: black;
+$font-dark: white;
+
+$cursive: "Annie Use Your Telescope", cursive;
+$poppins: "Poppins", sans-serif;
+
+$font-weights: (
+    "thin": 100,
+    "regular": 400,
+    "bold": 800,
+    "extra-bold": 900
+);
+
+@mixin heading() {
+    font-family: $cursive;
+    font-weight: map-get($font-weights, regular);
+    font-style: normal;
+    font-size: 36px;
+}

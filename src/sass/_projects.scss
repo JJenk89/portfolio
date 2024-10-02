@@ -1,0 +1,115 @@
+@use "./variables";
+
+@mixin heading() {
+    font-family: variables.$cursive;
+    font-weight: map-get(variables.$font-weights, regular);
+    font-style: normal;
+    font-size: 36px;
+}
+
+
+/* PROJECTS */
+
+.projects {
+    height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+
+    .section-title {
+        @include heading();
+        margin: 0 0 0 1rem;
+    }
+}
+
+.carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+    position: relative;
+    top: 48%;
+
+    .dot {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+       
+       
+    }
+    .active {
+        background-color: variables.$gold;
+    }
+}
+
+.carousel-wrapper {
+    margin-top: 1rem;
+    width: 100%;
+    position: relative;
+    
+
+    .carousel__track-container {
+        position: relative;
+        height: 100%;
+
+
+
+        .carousel__track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            transition: transform 250ms ease-in;
+
+        }
+
+        .carousel__slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+
+    
+
+    .buttons {
+        margin: 2rem 0 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    button {
+        background: none;
+        border: 1px solid white;
+        color: white;
+        font-family: variables.$poppins;
+        border-radius: 5px;
+        padding: 5px;
+        height: 40px;
+        width: 100px;
+    }
+}
+
+.project {
+    height: 33vh;
+    margin: 0 1rem 0 1rem;
+    position: absolute;
+
+
+    h4 {
+        font-family: variables.$poppins;
+        font-size: 2rem;
+    }
+
+    .project-description {
+        font-family: variables.$poppins;
+        font-size: 0.75rem;
+    }
+}
+

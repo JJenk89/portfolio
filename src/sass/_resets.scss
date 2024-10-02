@@ -1,0 +1,38 @@
+@use "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    max-width: 65ch;
+    text-wrap: pretty;
+}
+
+
+
+body {
+    background-color: variables.$bg-black;
+    font-family: variables.$poppins;
+    color: variables.$font-dark;
+}
+
+
+span {
+    color: variables.$gold;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.menu-bar {
+    display: none;
+}

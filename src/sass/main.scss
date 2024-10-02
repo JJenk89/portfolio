@@ -1,74 +1,25 @@
+@use "./mob-menu";
+@use "./variables";
+@use "./resets";
+@use "./scroller";
+@use "./nav";
+@use "./projects";
+@use "./about";
+@use "./contact";
+@use "./footer";
+
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* GLOBAL VARIABLES */
-$margin: 0 1rem 0 1rem;
-$gold: #F8A910;
-$bg-black: black;
-$font-dark: white;
-
-$cursive: "Annie Use Your Telescope", cursive;
-$poppins: "Poppins", sans-serif;
-
-$font-weights: (
-    "thin": 100,
-    "regular": 400,
-    "bold": 800,
-    "extra-bold": 900
-);
 
 @mixin heading() {
-    font-family: $cursive;
-    font-weight: map-get($font-weights, regular);
+    font-family: variables.$cursive;
+    font-weight: map-get(variables.$font-weights, regular);
     font-style: normal;
     font-size: 36px;
 }
 
 /* STYLES - MOBILE SMALL 
  */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-}
-
-p {
-    max-width: 65ch;
-    text-wrap: pretty;
-}
-
-
-
-body {
-    background-color: $bg-black;
-    font-family: $poppins;
-    color: $font-dark;
-}
-
-
-
-.scroller {
-    height: 100dvh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
-  
-  .scroller section {
-    scroll-snap-align: start;
-  }
-
-.disable-scroll {
-    overflow: hidden;
-}
-
-span {
-    color: $gold;
-}
-
 
 .home {
     background-image: url(/assets/home-bkg-sm.jpg);
@@ -80,16 +31,13 @@ span {
 
 }
 
-
-
-
 .home-content {
     margin: 0 1rem 0 1rem;
     height: 100dvh;
 
     h2 {
         font-size: 40px;
-        font-weight: map-get($font-weights, extra-bold );
+        font-weight: map-get(variables.$font-weights, extra-bold );
         line-height: 1;
         margin-bottom: 2rem;
     }
@@ -98,77 +46,6 @@ span {
         margin-bottom: 2rem;
     }
     
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4rem;
-
-    .logo {
-            @include heading();
-            font-size: 24px;
-        }
-    
-
-    .burger-btn {
-        border: none;
-        background: none;
-        height: 100%;
-        width: 100%;
-    }
-}
-
-
-.menu-bar {
-    display: none;
-}
-
-
-
-/* MOBILE MENU */
-
-.burger-menu-bkg {
-    background-image: url(/assets/home-bkg-sm.jpg);
-}
-.burger-menu-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    .cross {
-        background: none;
-        border: none;
-    }
-}
-.burger-menu {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    background-color: rgba(47, 47, 47, 0.945);
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 1rem 1rem 1rem;
-
-    ul {
-        list-style: none;
-        height: 100%;
-        font-family: $cursive;
-        font-size: 2.25rem;
-        margin: 3rem;
-        text-align: center;
-
-        li {
-
-            margin: 2.25rem;
-            a {
-                color: white;
-
-            }
-
-        }
-    }
 }
 
 .home-bottom {
@@ -191,241 +68,6 @@ nav {
     }
 }
 
-
-
-/* PROJECTS */
-
-.projects {
-    height: 100dvh;
-    position: relative;
-    overflow-x: hidden;
-
-    .section-title {
-        @include heading();
-        margin: 0 0 0 1rem;
-    }
-}
-
-.carousel-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0 1rem 0;
-    position: relative;
-    top: 48%;
-
-    .dot {
-        width: 20px;
-        height: 2px;
-        background-color: white;
-       
-       
-    }
-    .active {
-        background-color: $gold;
-    }
-}
-
-.carousel-wrapper {
-    margin-top: 1rem;
-    width: 100%;
-    position: relative;
-    
-
-    .carousel__track-container {
-        position: relative;
-        height: 100%;
-
-
-
-        .carousel__track {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            transition: transform 250ms ease-in;
-
-        }
-
-        .carousel__slide {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-        img {
-            width: 100%;
-            height: 270px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-    }
-
-    
-
-    .buttons {
-        margin: 2rem 0 1rem 0;
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-    button {
-        background: none;
-        border: 1px solid white;
-        color: white;
-        font-family: $poppins;
-        border-radius: 5px;
-        padding: 5px;
-        height: 40px;
-        width: 100px;
-    }
-}
-
-.project {
-    height: 33vh;
-    margin: 0 1rem 0 1rem;
-    position: absolute;
-
-
-    h4 {
-        font-family: $poppins;
-        font-size: 2rem;
-    }
-
-    .project-description {
-        font-family: $poppins;
-        font-size: 0.75rem;
-    }
-}
-
-
-
-
-
-
-/* ABOUT */
-
-
-
-.about-me {
-    height: 100dvh;
-    margin: $margin;
-
-    .section-title {
-        @include heading();
-    }
-
-    .about-me-text {
-        margin-top: 1rem;
-
-        .p1 {
-            margin: 1rem;
-        }
-        .p2 {
-            margin: 1rem;
-        }
-        .p3 {
-            margin: 1rem;
-        }
-    }
-}
-
-.tech-icons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    margin: 1rem;
-
-    img {
-        height: 3.75rem;
-        width: 3.125rem;
-    }
-}
-
-/* CONTACT FORM */
-
-
-
-.contact {
-    height: 100dvh;
-    margin: $margin;
-
-    div {
-        @include heading();
-    }
-   
-}
-
-.contact-text {
-    font-family: $poppins;
-    text-align: center;
-    margin: 1rem auto;
-    line-height: 32px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 3rem 1rem 0 1rem;
-
-    input {
-        background: none;
-        border: $font-dark solid 1px;
-        border-radius: 5px;
-        font-family: $cursive;
-        height: 1.8rem;
-        padding: 0.8rem;
-        letter-spacing: 2px;
-        color: $font-dark;
-
-    }
-
-    textarea {
-        background: none;
-        border: $font-dark solid 1px;
-        border-radius: 5px;
-        font-family: $cursive;
-        padding: 0.8rem;
-        letter-spacing: 2px;
-        color: $font-dark;
-        height: 6.25rem;
-        margin-bottom: 5px;
-        resize: none;
-    }
-
-    button {
-        background: none;
-        border: $font-dark solid 1px;
-        border-radius: 5px;
-        font-family: $cursive;
-        font-weight: map-get($font-weights, thin);
-        font-size: 20px;
-        letter-spacing: 3px;
-        color: $font-dark;
-        height: 1.8rem;
-        width: 6.75rem;
-    }
-}
-
-/* FOOTER */
-
-footer {
-    height: 150px;
-    border-top: 1px white solid;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-}
-
-
-.hidden {
-    display: none;
-}
 
 @media screen and (min-width: 376px) {
 
@@ -467,7 +109,7 @@ footer {
     
         h2 {
             font-size: 40px;
-            font-weight: map-get($font-weights, extra-bold );
+            font-weight: map-get(variables.$font-weights, extra-bold );
         }
         
         .intro {
@@ -648,7 +290,7 @@ footer {
 
         ul {
             display: flex;
-            font-family: $cursive;
+            font-family: variables.$cursive;
         }
 
         li {
@@ -657,7 +299,7 @@ footer {
         }
 
         a {
-            color: $font-dark;
+            color: variables.$font-dark;
             padding: 1rem;
             font-size: 1.4rem;
         }

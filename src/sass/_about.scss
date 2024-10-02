@@ -1,0 +1,47 @@
+@use "./variables";
+@mixin heading() {
+    font-family: variables.$cursive;
+    font-weight: map-get(variables.$font-weights, regular);
+    font-style: normal;
+    font-size: 36px;
+}
+
+/* ABOUT */
+
+
+
+.about-me {
+    height: 100dvh;
+    margin: variables.$margin;
+
+    .section-title {
+        @include heading();
+    }
+
+    .about-me-text {
+        margin-top: 1rem;
+
+        .p1 {
+            margin: 1rem;
+        }
+        .p2 {
+            margin: 1rem;
+        }
+        .p3 {
+            margin: 1rem;
+        }
+    }
+}
+
+.tech-icons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 1rem;
+
+    img {
+        height: 3.75rem;
+        width: 3.125rem;
+    }
+}

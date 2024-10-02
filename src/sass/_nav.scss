@@ -1,0 +1,28 @@
+@use "./variables";
+
+@mixin heading() {
+    font-family: variables.$cursive;
+    font-weight: map-get(variables.$font-weights, regular);
+    font-style: normal;
+    font-size: 36px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .logo {
+            @include heading();
+            font-size: 24px;
+        }
+    
+
+    .burger-btn {
+        border: none;
+        background: none;
+        height: 100%;
+        width: 100%;
+    }
+}

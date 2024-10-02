@@ -1,0 +1,13 @@
+.scroller {
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .scroller section {
+    scroll-snap-align: start;
+  }
+
+.disable-scroll {
+    overflow: hidden;
+}

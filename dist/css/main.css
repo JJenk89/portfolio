@@ -1,91 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* GLOBAL VARIABLES */
-/* STYLES - MOBILE SMALL 
- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-p {
-  max-width: 65ch;
-  text-wrap: pretty;
-}
-
-body {
-  background-color: black;
-  font-family: "Poppins", sans-serif;
-  color: white;
-}
-
-.scroller {
-  height: 100dvh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-.scroller section {
-  scroll-snap-align: start;
-}
-
-.disable-scroll {
-  overflow: hidden;
-}
-
-span {
-  color: #F8A910;
-}
-
-.home {
-  background-image: url(/assets/home-bkg-sm.jpg);
-}
-.home .background {
-  background-color: rgba(47, 47, 47, 0.54);
-}
-
-.home-content {
-  margin: 0 1rem 0 1rem;
-  height: 100dvh;
-}
-.home-content h2 {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 2rem;
-}
-.home-content .intro {
-  margin-bottom: 2rem;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4rem;
-}
-nav .logo {
-  font-family: "Annie Use Your Telescope", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 36px;
-  font-size: 24px;
-}
-nav .burger-btn {
-  border: none;
-  background: none;
-  height: 100%;
-  width: 100%;
-}
-
-.menu-bar {
-  display: none;
-}
-
 /* MOBILE MENU */
 .burger-menu-bkg {
   background-image: url(/assets/home-bkg-sm.jpg);
@@ -125,22 +39,71 @@ nav .burger-btn {
   color: white;
 }
 
-.home-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+body {
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+span {
+  color: #F8A910;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-bar {
+  display: none;
+}
+
+.scroller {
   height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
-.home-bottom .extra-info {
-  width: 200px;
-  font-size: 14px;
-  text-align: right;
-  margin: 4rem 0 2rem 0;
+
+.scroller section {
+  scroll-snap-align: start;
 }
-.home-bottom .call-to-action {
-  font-weight: 800;
-  height: 10%;
-  align-content: end;
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+nav .logo {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  font-size: 24px;
+}
+nav .burger-btn {
+  border: none;
+  background: none;
+  height: 100%;
+  width: 100%;
 }
 
 /* PROJECTS */
@@ -341,8 +304,45 @@ footer {
   justify-content: flex-start;
 }
 
-.hidden {
-  display: none;
+/* STYLES - MOBILE SMALL 
+ */
+.home {
+  background-image: url(/assets/home-bkg-sm.jpg);
+}
+.home .background {
+  background-color: rgba(47, 47, 47, 0.54);
+}
+
+.home-content {
+  margin: 0 1rem 0 1rem;
+  height: 100dvh;
+}
+.home-content h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.home-content .intro {
+  margin-bottom: 2rem;
+}
+
+.home-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100dvh;
+}
+.home-bottom .extra-info {
+  width: 200px;
+  font-size: 14px;
+  text-align: right;
+  margin: 4rem 0 2rem 0;
+}
+.home-bottom .call-to-action {
+  font-weight: 800;
+  height: 10%;
+  align-content: end;
 }
 
 @media screen and (min-width: 376px) {
