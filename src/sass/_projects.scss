@@ -1,12 +1,5 @@
 @use "./variables";
 
-@mixin heading() {
-    font-family: variables.$cursive;
-    font-weight: map-get(variables.$font-weights, regular);
-    font-style: normal;
-    font-size: 36px;
-}
-
 
 /* PROJECTS */
 
@@ -16,23 +9,24 @@
     overflow-x: hidden;
 
     .section-title {
-        @include heading();
+        @include variables.heading();
         margin: 0 0 0 1rem;
     }
 }
 
 .carousel-nav {
+    height: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin: 1rem 0 1rem 0;
     position: relative;
-    top: 48%;
+    top: 29vh;
 
     .dot {
         width: 20px;
-        height: 2px;
+        height: 4px;
         background-color: white;
        
        
@@ -79,7 +73,7 @@
     
 
     .buttons {
-        margin: 2rem 0 1rem 0;
+        margin: 4rem 0 1rem 0;
         display: flex;
         justify-content: center;
         gap: 1.5rem;

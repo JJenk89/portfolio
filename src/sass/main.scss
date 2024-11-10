@@ -22,7 +22,7 @@
  */
 
 .home {
-    background-image: url(/assets/home-bkg-sm.jpg);
+    background: url(/assets/home-bkg-sm.jpg);
 
      .background {
         background-color: rgba(47, 47, 47, 0.54)
@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    height: 100dvh;
+    height: 50dvh;
 
     .extra-info {
         width: 200px;
@@ -63,7 +63,7 @@
     
     .call-to-action {
         font-weight: 800;
-        height: 10%;
+        height: 50%;
         align-content: end;
     }
 }
@@ -157,9 +157,32 @@
         gap: 1rem;
         margin: 1rem 0 1rem 0;
         position: relative;
-        top: 43%;
+         top: 40vh;
     }
     
+}
+
+@media screen and (min-width: 426px), screen and (min-height: 760px) {
+    .carousel-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0 1rem 0;
+        position: relative;
+         top: 34vh;
+       }
+}
+@media screen and (min-width: 426px), screen and (min-height: 880px) {
+    .carousel-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0 1rem 0;
+        position: relative;
+         top: 30vh;
+       }
 }
 
 /////////////////////////////////////////////////
@@ -209,15 +232,14 @@
     }
 
      .projects {
-        max-width: 650px;
         margin: 0 auto;
-    }
+    } 
 
     .project{
         margin-left: 1rem;
 
         h4, p {
-            margin-left: 1rem;
+           /*  margin-left: 1rem; */
         }
        
     }
@@ -226,8 +248,8 @@
         margin-left: 1rem;
     }
     .carousel-nav {
-        top: 78%;
-    }
+         top: 78%;    
+}
 
     .about-me {
         height: 100dvh;
@@ -250,6 +272,17 @@
         margin: 3rem auto 0 auto;
         width: 400px;
     }
+}
+
+@media screen and (min-width: 660px), screen and (min-height: 360px) {
+
+   
+    .carousel-wrapper .carousel__track-container img {
+        height: 270px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 5px;
+      }
 }
 
 ////////////////////////
@@ -307,7 +340,7 @@
 
     .home-content h2 {
         font-size: 3.7rem;
-        margin-bottom: 1rem;
+        margin-bottom: 8rem;
     }
 
     .home__text-wrapper .intro {
@@ -322,5 +355,309 @@
         align-items: flex-end;
         height: 40%;
         justify-content: flex-end;
+        margin: 4rem auto;
+
+        p {
+            font-size: 1.7rem;
+        }
+    }
+
+    .home__text-wrapper .extra-info {
+        font-size: 1.1rem;
+    }
+
+    
+/* PROJECTS */
+
+    .projects .section-title {
+    
+    font-size: 3rem;
+    
+    }
+
+    .carousel-wrapper .buttons {
+        margin: 8rem 0 1rem 0;
+      }
+
+    .carousel-wrapper .carousel__track-container img {
+        width: 100%;
+        height: 500px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .carousel-nav {
+        top: 50%;
+      }
+
+      .project-type {
+        margin: 2rem auto;
+        font-size: 1.4rem;
+      }
+
+      .project h4 {
+        font-size: 3rem;
+        margin: 1rem 0 1rem 0;
+        margin-left: 0px;
+      }
+
+      .project .project-description {
+        font-size: 1.4rem;
+        margin: 2rem auto;
+      }
+
+    /* ABOUT ME */
+
+    .about-me .section-title {
+        font-size: 3rem;
+      }
+
+    .tech-icons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        margin: 6rem;
+
+        img {
+            height: 6.8rem;
+            width: 6.1rem;
+          }
+      }
+
+      .about-me .about-me-text {
+        margin: 4rem auto;
+
+        p {
+            font-size: 1.4rem;
+        }
+      }
+
+      /////////////////////////
+      /// CONTACT ////////////
+      /// ///////////////////
+      /// 
+      
+      .contact {
+        height: 100dvh;
+      }
+      
+      .contact div {
+        font-size: 3rem;
+      }
+
+      .contact-text {
+        font-size: 1.5rem;
+        line-height: 2.7rem;
+        margin: 8rem auto;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 3rem auto 3rem auto;
+        width: 500px;
+      }
+
+      form input {
+        height: 2.8rem;
+        letter-spacing: 4px;
+      }
+      
+      form textarea {
+        letter-spacing: 4px;
+        height: 15.3rem;
+      }
+
+      form button {
+        font-size: 20px;
+        letter-spacing: 5px;
+        height: 2.8rem;
+        width: 6.75rem;
+      }
+
+}
+
+@media screen and (min-width: 1000px), screen and (min-height: 1100px) {
+
+    .carousel-wrapper .buttons {
+        margin: 8rem 0 1rem 0;
+      }
+    .carousel-nav {
+        top: 48vh;
+    }
+  }
+@media screen and (min-width: 1020px), screen and (min-height: 1300px) {
+
+   
+    .carousel-nav {
+        top: 40vh;
+    }
+  }
+
+////////////////////////
+/// DESKTOP STYLES /////
+/// ////////////////////
+/// 
+
+@media screen and (min-width: 1099px), screen and (min-height: 1300px) {
+
+    .home {
+        background-image: url(/assets/home-laptop-lrg.jpg);
+    
+         .background {
+            background-color: rgba(47, 47, 47, 0.54)
+    
+        }
+    
+    }
+
+    .projects {
+        height: 120vh;
+    }
+
+    .carousel-wrapper .carousel__track-container img {
+        width: 60%;
+        margin: 0 20%;
+        height: 400px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .carousel-nav {
+        cursor: pointer;
+        top: 46vh;
+      }
+
+    button {
+        cursor: pointer;
+    }
+
+    .contact {
+        height: 120dvh;
+      }
+}
+
+@media screen and (min-width: 1420px) {
+    .home {
+        background: center no-repeat url(/assets/home-4k.jpg);
+        height: 110vh;
+    
+         .background {
+            background-color: rgba(47, 47, 47, 0.54);
+            height: 110vh;
+
+    
+        }
+    }
+
+    .home-content nav .logo {
+        font-size: 4rem;
+    }
+
+    .home-bottom {
+        height: 30%;
+        margin: 4rem auto;
+    }
+
+    .menu-bar a {
+        font-size: 1.8rem;
+    }
+
+    //PROJECTS//
+
+    .projects {
+        height: 200vh;
+    }
+    .carousel-nav {
+        cursor: pointer;
+        top: 75vh;
+    }
+
+    .carousel-wrapper .carousel__track-container img {
+        width: 60%;
+        margin: 0 20%;
+        height: 500px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    //ABOUT
+
+    .about-me {
+        height: 150vh;
+    }
+
+    .contact {
+        height: 150vh;
+    }
+   
+}
+
+@media screen and (min-width: 2500px) {
+    .carousel-nav {
+        cursor: pointer;
+        top: 48vh;
+    }
+
+    //ABOUT
+
+    .about-me {
+        height: 150vh;
+    }
+
+    .about-me .about-me-text {
+
+        margin: 4rem 33%;
+
+        .p1, .p2, .p3 {
+            font-size: 2rem;
+        }
+
+    }
+
+   
+
+    .tech-icons-grid img {
+        height: 9rem;
+        width: 8rem;
+    }
+
+    //contact
+
+    .contact {
+        height: 150vh;
+    }
+
+    .contact-text {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    form {
+        width: 700px;
+    }
+
+    form input {
+        height: 4rem;
+        letter-spacing: 4px;
+        font-size: 1.4rem;
+    }
+
+    form textarea {
+        letter-spacing: 4px;
+        height: 15.3rem;
+        font-size: 1.4rem;
+    }
+
+    form button {
+        font-size: 24px;
+        letter-spacing: 5px;
+        height: 3.3rem;
+        width: 8rem;
     }
 }

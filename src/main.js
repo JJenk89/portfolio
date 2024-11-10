@@ -114,3 +114,15 @@ function handleSwipe() {
 	moveToSlide(track, currentSlide, targetSlide);
 	updateDots(currentDot, targetDot);
 }
+
+//removes the scroll snap property at desktop sizes
+const scroller = document.querySelector(".scroller");
+var winWidth = window.innerWidth;
+
+function updateSize() {
+	if (winWidth > 1100) {
+		scroller.classList.remove("scroller");
+	}
+}
+
+updateSize();
