@@ -18,23 +18,34 @@
 .burger-menu {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  max-height: 0; /* Change height to max-height */
+  overflow: hidden;
   background-color: rgba(47, 47, 47, 0.945);
   align-items: center;
   justify-content: flex-start;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.burger-menu.open {
+  max-height: 100dvh;
+  opacity: 1;
   padding: 0 1rem 1rem 1rem;
 }
+
 .burger-menu ul {
   list-style: none;
-  height: 100%;
+  height: 100dvh;
   font-family: "Annie Use Your Telescope", cursive;
   font-size: 2.25rem;
   margin: 3rem;
   text-align: center;
 }
+
 .burger-menu ul li {
   margin: 2.25rem;
 }
+
 .burger-menu ul li a {
   color: white;
 }
@@ -54,6 +65,10 @@ p {
   text-wrap: pretty;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
   font-family: "Poppins", sans-serif;
@@ -65,7 +80,8 @@ span {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  margin: 0;
 }
 
 .menu-bar {
@@ -413,7 +429,7 @@ footer {
     gap: 1rem;
     margin: 1rem 0 1rem 0;
     position: relative;
-    top: 34vh;
+    top: 36vh;
   }
 }
 @media screen and (min-width: 426px), screen and (min-height: 880px) {
@@ -455,9 +471,6 @@ footer {
   }
   .project {
     margin-left: 1rem;
-  }
-  .project h4, .project p {
-    /*  margin-left: 1rem; */
   }
   .project-type {
     margin-left: 1rem;

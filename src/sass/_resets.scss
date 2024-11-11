@@ -15,6 +15,9 @@ p {
     text-wrap: pretty;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 
 body {
@@ -29,7 +32,8 @@ span {
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
+    margin: 0;
 }
 
 

@@ -50,12 +50,14 @@ const getNextSlide = (currentSlide, direction) => {
 // MENU
 burger.addEventListener("click", () => {
 	menu.classList.remove("hidden");
+	menu.classList.add("open");
 	document.body.classList.add("disable-scroll");
 });
 
 //MENU CLOSING
 cross.addEventListener("click", () => {
 	menu.classList.add("hidden");
+	menu.classList.remove("open");
 	document.body.classList.remove("disable-scroll");
 });
 
@@ -64,6 +66,7 @@ menuLinks.forEach((a) => {
 	a.addEventListener("click", () => {
 		document.body.classList.remove("disable-scroll");
 		menu.classList.add("hidden");
+		menu.classList.remove("open");
 	});
 });
 
