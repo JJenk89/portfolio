@@ -107,3 +107,18 @@
     }
 }
 
+.tech-used {
+    padding: 1rem;
+
+    .tech-used_icons {
+        display: flex;
+        margin: 0.5rem;
+    }
+    img {
+        height: 40px !important;
+        width: 35px !important;
+        margin: 0.5rem;
+
+    }
+}
+

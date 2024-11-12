@@ -218,6 +218,19 @@ nav .burger-btn {
   font-size: 0.75rem;
 }
 
+.tech-used {
+  padding: 1rem;
+}
+.tech-used .tech-used_icons {
+  display: flex;
+  margin: 0.5rem;
+}
+.tech-used img {
+  height: 40px !important;
+  width: 35px !important;
+  margin: 0.5rem;
+}
+
 /* ABOUT */
 .about-me {
   height: 100dvh;
@@ -717,6 +730,10 @@ footer {
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 5px;
+  }
+  .carousel-wrapper button {
+    height: 80px;
+    width: 150px;
   }
   .about-me {
     height: 150vh;
